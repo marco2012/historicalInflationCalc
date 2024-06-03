@@ -1,0 +1,3 @@
+# InflationCalc
+
+Calculate historical inflation

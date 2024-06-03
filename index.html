@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html id="html" class="h-full">
+    <head>
+        <!-- HTML Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>InflationCalc</title>
+        <meta name="description" content="Calculate cost of energy" />
+
+        <!-- Facebook Meta Tags -->
+        <!-- <meta property="og:url" content="https://danasclub.it" /> -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="InflationCalc" />
+        <meta property="og:description" content="Calculate cost of energy" />
+        <meta property="og:image" content="assets/icon-inflation.png" />
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="danasclub.it" />
+        <!-- <meta property="twitter:url" content="https://danasclub.it" /> -->
+        <meta name="twitter:title" content="InflationCalc" />
+        <meta name="twitter:description" content="Calculate cost of energy" />
+        <meta name="twitter:image" content="assets/icon-inflation.png" />
+
+        <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+        <!-- PWA -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_14_Pro_Max_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_14_Pro_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/iPhone_11__iPhone_XR_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+            href="splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/12.9__iPad_Pro_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/10.9__iPad_Air_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/10.5__iPad_Air_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/10.2__iPad_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+            href="splash_screens/8.3__iPad_Mini_landscape.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_14_Pro_Max_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_14_Pro_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/iPhone_11__iPhone_XR_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/12.9__iPad_Pro_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/10.9__iPad_Air_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/10.5__iPad_Air_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/10.2__iPad_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="splash_screens/8.3__iPad_Mini_portrait.png"
+        />
+
+        <link href="output.css" rel="stylesheet" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!-- dark mode https://flowbite.com/docs/customize/dark-mode/ -->
+        <script>
+            // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+            if (
+                localStorage.getItem("color-theme") === "dark" ||
+                (!("color-theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+        </script>
+    </head>
+    <body class="h-full bg-gray-50 dark:bg-slate-800">
+        <!-- dark mode toggle -->
+        <div style="position: absolute; top: 10px; right: 10px">
+            <button
+                id="theme-toggle"
+                type="button"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5"
+            >
+                <svg
+                    id="theme-toggle-dark-icon"
+                    class="hidden w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                    ></path>
+                </svg>
+                <svg
+                    id="theme-toggle-light-icon"
+                    class="hidden w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+
+        <div
+            class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+        >
+            <div class="w-full max-w-md space-y-8">
+                <div>
+                    <img
+                        class="mx-auto h-12 w-auto"
+                        src="assets/icon-inflation.png"
+                        alt="Your Company"
+                    />
+                    <h2
+                        class="mt-1 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200"
+                    >
+                        InflationCalc
+                    </h2>
+                    <p
+                        class="mt-1 text-center text-sm text-gray-600 dark:text-gray-200"
+                    >
+                        Calculate historical inflation
+                    </p>
+                    <p class="mt-1 text-center text-sm text-gray-600">
+                        <a
+                            href="https://marco2012.github.io/?utm_source=InflationCalc&utm_medium=social&utm_campaign=profile"
+                            target="_blank"
+                            class="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-200"
+                            >UI by MarLup</a
+                        >
+                    </p>
+                </div>
+                <form class="mt-8 space-y-3 mx-2" action="#" method="POST">
+                    <input type="hidden" name="remember" value="true" />
+                    <div class="-space-y-px rounded-md shadow-sm">
+                        <div class="grid grid-cols-1 gap-2">
+                            <div>
+                                <label
+                                    for="start_amount"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                                    >Start amount</label
+                                >
+                                <div class="relative mt-1 rounded-md shadow-sm">
+                                    <!-- <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+                                    >
+                                        <span class="text-gray-500 sm:text-sm"
+                                            >W</span
+                                        >
+                                    </div> -->
+                                    <input
+                                        type="number"
+                                        name="start_amount"
+                                        id="start_amount"
+                                        min="0"
+                                        class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    />
+                                    <div
+                                        class="absolute inset-y-0 right-0 flex items-center"
+                                    >
+                                        <label for="unit" class="sr-only"
+                                            >Unit</label
+                                        >
+                                        <select
+                                            id="unit"
+                                            name="unit"
+                                            class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                        >
+                                            <option value="EU euro [1998-2015]">
+                                                Euro
+                                            </option>
+                                            <option
+                                                value="US dollar [1791-2015]"
+                                            >
+                                                US Dollar
+                                            </option>
+                                            <option
+                                                value="UK pound [1658-2015]"
+                                            >
+                                                UK Pound
+                                            </option>
+                                            <option
+                                                value="French livres tournois [1663-1795]"
+                                            >
+                                                French Livres
+                                            </option>
+                                            <option value="French franc">
+                                                French Franc
+                                            </option>
+                                            <option
+                                                value="Italian lira [1880-2015]"
+                                            >
+                                                Italian lira
+                                            </option>
+                                            <option
+                                                value="Japanese yen [1877-2015]"
+                                            >
+                                                Japanese Yen
+                                            </option>
+                                            <option
+                                                value="Spanish peseta [1850-2015]"
+                                            >
+                                                Spanish Peseta
+                                            </option>
+                                            <option
+                                                value="Greek drachma"
+                                            >
+                                                Greek Drachma
+                                            </option>
+                                            <!-- <option value="gram gold [1658-2015]">Gold</option> -->
+                                            <!-- <option value="gram silver [1658-2015]">Silver</option> -->
+                                            <!-- <option value="----" disabled="">-----------------</option>
+                                            <option value="Albania" disabled="">Albania:</option>
+                                            <option value="Albanian lek [1927-2015]"> lek [1927-2015]</option>
+                                            <option value="Argentina" disabled="">Argentina:</option>
+                                            <option value="Argentinian peso moneda corriente [1826-1882]"> peso moneda corriente [1826-1882]</option>
+                                            <option value="Argentinian peso moneda nacional [1882-1970]"> peso moneda nacional [1882-1970]</option>
+                                            <option value="Argentinian peso ley argentino [1970-1983]"> peso ley argentino [1970-1983]</option>
+                                            <option value="Argentinian peso argentino [1983-1985]"> peso argentino [1983-1985]</option>
+                                            <option value="Argentinian austral argentino [1985-1992]"> austral argentino [1985-1992]</option>
+                                            <option value="Argentinian peso [1992-2015]"> peso [1992-2015]</option>
+                                            <option value="Australia" disabled="">Australia:</option>
+                                            <option value="Australian pound [1928-1967]"> pound [1928-1967]</option>
+                                            <option value="Australian dollar [1967-2015]"> dollar [1967-2015]</option>
+                                            <option value="Austria/Austria-Hungary" disabled="">Austria/Austria-Hungary:</option>
+                                            <option value="Austrian-Hungarian florin/gulden [1863-1900]"> florin/gulden [1863-1900]</option>
+                                            <option value="Austrian krone [1893-1925]"> krone [1893-1925]</option>
+                                            <option value="Austrian schilling [1924-1948]"> schilling [1924-1948]</option>
+                                            <option value="Austrian schilling [1947-2015]"> schilling [1947-2015]</option>
+                                            <option value="Belgium" disabled="">Belgium:</option>
+                                            <option value="Belgian franc [1880-2015]"> franc [1880-2015]</option>
+                                            <option value="Belgian belgas [1926-1945]"> belgas [1926-1945]</option>
+                                            <option value="Brazil" disabled="">Brazil:</option>
+                                            <option value="Brazilian milréis [1880-1942]"> milréis [1880-1942]</option>
+                                            <option value="Brazilian cruzeiro [1942-1967]"> cruzeiro [1942-1967]</option>
+                                            <option value="Brazilian cruzeiro novo [1967-1986]"> cruzeiro novo [1967-1986]</option>
+                                            <option value="Brazilian cruzado [1986-1989]"> cruzado [1986-1989]</option>
+                                            <option value="Brazilian cruzado novo/cruzeiro [1989-1993]"> cruzado novo/cruzeiro [1989-1993]</option>
+                                            <option value="Brazilian cruzeiro real [1993-1994]"> cruzeiro real [1993-1994]</option>
+                                            <option value="Brazilian real [1995-2015]"> real [1995-2015]</option>
+                                            <option value="Bulgaria" disabled="">Bulgaria:</option>
+                                            <option value="Bulgarian lev [1890-1952]"> lev [1890-1952]</option>
+                                            <option value="Bulgarian lev [1952-1962]"> lev [1952-1962]</option>
+                                            <option value="Bulgarian lev [1962-1999]"> lev [1962-1999]</option>
+                                            <option value="Bulgarian lev [1999-2015]"> lev [1999-2015]</option>
+                                            <option value="Canada" disabled="">Canada:</option>
+                                            <option value="Canadian dollar [1913-2015]"> dollar [1913-2015]</option>
+                                            <option value="Chile" disabled="">Chile:</option>
+                                            <option value="Chilean peso [1917-1960]"> peso [1917-1960]</option>
+                                            <option value="Chilean escudo [1960-1975]"> escudo [1960-1975]</option>
+                                            <option value="Chilean peso [1975-2015]"> peso [1975-2015]</option>
+                                            <option value="China" disabled="">China:</option>
+                                            <option value="Chines yuan [1922-2015]"> yuan [1922-2015]</option>
+                                            <option value="Colombia" disabled="">Colombia:</option>
+                                            <option value="Colombian peso [1926-2015]"> peso [1926-2015]</option>
+                                            <option value="Czech republic/Czechoslovakia" disabled="">Czech republic/Czechoslovakia:</option>
+                                            <option value="Czechoslovak koruna [1922-1953]"> koruna [1922-1953]</option>
+                                            <option value="Czechoslovak koruna [1953-1993]"> koruna [1953-1993]</option>
+                                            <option value="Czech koruna [1993-2015]"> koruna [1993-2015]</option>
+                                            <option value="Denmark" disabled="">Denmark:</option>
+                                            <option value="Danish krone [1804-2015]"> krone [1804-2015]</option>
+                                            <option value="Estonia" disabled="">Estonia:</option>
+                                            <option value="Estonian kroon [1930-1940]"> kroon [1930-1940]</option>
+                                            <option value="Estonian kroon [1930-2015]"> kroon [1930-2015]</option>
+                                            <option value="Finland" disabled="">Finland:</option>
+                                            <option value="Finnish markka [1913-1963]"> markka [1913-1963]</option>
+                                            <option value="Finnish markka [1960-2015]"> markka [1960-2015]</option>
+                                            <option value="Germany" disabled="">Germany:</option>
+                                            <option value="German Hamburg mark banco [1658-1870]"> Hamburg mark banco [1658-1870]</option>
+                                            <option value="German mark [1871-1924]"> mark [1871-1924]</option>
+                                            <option value="German reichsmark [1924-1948]"> reichsmark [1924-1948]</option>
+                                            <option value="German Deutsche Mark [1948-2015]"> Deutsche Mark [1948-2015]</option>
+                                            <option value="Hong Kong" disabled="">Hong Kong:</option>
+                                            <option value="Hong Kong dollar [1916-2015]"> dollar [1916-2015]</option>
+                                            <option value="India" disabled="">India:</option>
+                                            <option value="Indian rupee [1916-2015]"> rupee [1916-2015]</option>
+                                            <option value="Iceland" disabled="">Iceland:</option>
+                                            <option value="Icelandic króna [1945-1981]"> króna [1945-1981]</option>
+                                            <option value="Icelandic króna [1981-2015]"> króna [1981-2015]</option>
+                                            <option value="Japan" disabled="">Japan:</option>
+                                            <option value="Latvia" disabled="">Latvia:</option>
+                                            <option value="Latvian lats [1930-1940]"> lats [1930-1940]</option>
+                                            <option value="Latvian rouble [1992-1992]"> rouble [1992-1992]</option>
+                                            <option value="Latvian lats [1992-2015]"> lats [1992-2015]</option>
+                                            <option value="Lithuania" disabled="">Lithuania:</option>
+                                            <option value="Lithuanian litas [1932-1940]"> litas [1932-1940]</option>
+                                            <option value="Lithuanian talonas [1991-1993]"> talonas [1991-1993]</option>
+                                            <option value="Lithuanian litas [1993-2015]"> litas [1993-2015]</option>
+                                            <option value="Mexico" disabled="">Mexico:</option>
+                                            <option value="Mexican peso [1947-1993]"> peso [1947-1993]</option>
+                                            <option value="Mexican peso [1993-2015]"> peso [1993-2015]</option>
+                                            <option value="Netherlands" disabled="">Netherlands:</option>
+                                            <option value="Dutch guilder [1660-2015]"> guilder [1660-2015]</option>
+                                            <option value="New Zeeland" disabled="">New Zeeland:</option>
+                                            <option value="New Zeeland pound [1928-1967]"> pound [1928-1967]</option>
+                                            <option value="New Zeeland dollar [1967-2015]"> dollar [1967-2015]</option>
+                                            <option value="Norway" disabled="">Norway:</option>
+                                            <option value="Norwegian krone [1819-2015]"> krone [1819-2015]</option>
+                                            <option value="Poland" disabled="">Poland:</option>
+                                            <option value="Polish zloty [1930-1950]"> zloty [1930-1950]</option>
+                                            <option value="Polish zloty [1950-1995]"> zloty [1950-1995]</option>
+                                            <option value="Polish zloty [1995-2015]"> zloty [1995-2015]</option>
+                                            <option value="Portugal" disabled="">Portugal:</option>
+                                            <option value="Portugese escudo [1880-2015]"> escudo [1880-2015]</option>
+                                            <option value="Romania" disabled="">Romania:</option>
+                                            <option value="Romanian leu [1882-1947]"> leu [1882-1947]</option>
+                                            <option value="Romanian leu [1947-1952]"> leu [1947-1952]</option>
+                                            <option value="Romanian leu [1952-2005]"> leu [1952-2005]</option>
+                                            <option value="Romanian leu [2005-2015]"> leu [2005-2015]</option>
+                                            <option value="Russia/Soviet Union" disabled="">Russia/Soviet Union:</option>
+                                            <option value="Russian rouble [1880-1917]"> rouble [1880-1917]</option>
+                                            <option value="Russian rouble [1961-1998]"> rouble [1961-1998]</option>
+                                            <option value="Russian rouble [1998-2015]"> rouble [1998-2015]</option>
+                                            <option value="Serbia/Yugoslavia" disabled="">Serbia/Yugoslavia:</option>
+                                            <option value="Yugoslav dinar [1892-1941]"> dinar [1892-1941]</option>
+                                            <option value="Yugoslav dinar [1994-2003]"> dinar [1994-2003]</option>
+                                            <option value="Serbian dinar [1994-2015]"> dinar [1994-2015]</option>
+                                            <option value="South Africa" disabled="">South Africa:</option>
+                                            <option value="South African pound [1928-1961]"> pound [1928-1961]</option>
+                                            <option value="South rand [1961-2015]"> rand [1961-2015]</option>
+                                            <option value="Spain" disabled="">Spain:</option>
+                                            <option value="Sweden" disabled="">Sweden:</option>
+                                            <option value="Swedish mark kopparmynt [1658-1719]"> mark kopparmynt [1658-1719]</option>
+                                            <option value="Swedish mark kopparmynt [1719-1777]"> mark kopparmynt [1719-1777]</option>
+                                            <option value="Swedish riksdaler [1777-1789]"> riksdaler [1777-1789]</option>
+                                            <option value="Swedish riksdaler riksgälds [1789-1855]"> riksdaler riksgälds [1789-1855]</option>
+                                            <option value="Swedish riksdaler riksmynt [1855-1873]"> riksdaler riksmynt [1855-1873]</option>
+                                            <option value="Swedish krona [1873-2015]"> krona [1873-2015]</option>
+                                            <option value="Switzerland" disabled="">Switzerland:</option>
+                                            <option value="Swiss franc [1880-2015]"> franc [1880-2015]</option>
+                                            <option value="Turkey/Ottoman Empire" disabled="">Turkey/Ottoman Empire:</option>
+                                            <option value="Ottoman lira [1880-1913]"> lira [1880-1913]</option>
+                                            <option value="Turkish lira [1923-2005]"> lira [1923-2005]</option>
+                                            <option value="Turkish lira [2005-2015]"> lira [2005-2015]</option>  -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label
+                                    for="start_year"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                                    >Start Year</label
+                                >
+                                <div class="relative mt-1 rounded-md shadow-sm">
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+                                    >
+                                        <!-- <span class="text-gray-500 sm:text-sm"
+                                            >start_year</span
+                                        > -->
+                                    </div>
+                                    <!-- <input
+                                        type="number"
+                                        name="start_year"
+                                        id="start_year"
+                                        class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    /> -->
+                                    <select
+                                        id="start_year"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    >
+                                        <option selected>
+                                            Choose start year
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="end_year"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                                    >End Year</label
+                                >
+                                <div class="relative mt-1 rounded-md shadow-sm">
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+                                    >
+                                        <!-- <span class="text-gray-500 sm:text-sm"
+                                            >end_year</span
+                                        > -->
+                                    </div>
+                                    <!-- <input
+                                        type="number"
+                                        name="end_year"
+                                        id="end_year"
+                                        class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    /> -->
+                                    <select
+                                        id="end_year"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    ></select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div>
+                            <button
+                                type="button"
+                                class="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-4 mt-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                onclick="calculateCost()"
+                            >
+                                Calculate
+                            </button>
+                        </div>
+                        <br />
+                        <div class="grid grid-cols-1 gap-2">
+                            <div>
+                                <label
+                                    for="end_amount"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+                                    >End amount</label
+                                >
+                                <div class="relative mt-1 rounded-md shadow-sm">
+                                    <!-- <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+                                    >
+                                        <span class="text-gray-500 sm:text-sm"
+                                            >W</span
+                                        >
+                                    </div> -->
+                                    <input
+                                        type="text"
+                                        name="end_amount"
+                                        id="end_amount"
+                                        disabled
+                                        class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                    />
+                                    <div
+                                        class="absolute inset-y-0 right-0 flex items-center"
+                                    >
+                                        <label for="end_unit" class="sr-only"
+                                            >end_Unit</label
+                                        >
+                                        <select
+                                            id="end_unit"
+                                            name="end_unit"
+                                            class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                        >
+                                            <option value="EU euro [1998-2015]">
+                                                Euro
+                                            </option>
+                                            <option
+                                                value="US dollar [1791-2015]"
+                                            >
+                                                US Dollar
+                                            </option>
+                                            <option
+                                                value="UK pound [1658-2015]"
+                                            >
+                                                UK Pound
+                                            </option>
+                                            <option
+                                                value="French livres tournois [1663-1795]"
+                                            >
+                                                French Livres
+                                            </option>
+                                            <option
+                                                value="French franc [1795-1960]"
+                                            >
+                                                French Franc
+                                            </option>
+                                            <!-- <option value="French franc [1960-2015]">Franc franc [1960-2015]</option> -->
+                                            <option
+                                                value="Italian lira [1880-2015]"
+                                            >
+                                                Italian lira
+                                            </option>
+                                            <option
+                                                value="Japanese yen [1877-2015]"
+                                            >
+                                                Japanese Yen
+                                            </option>
+                                            <option
+                                                value="Spanish peseta [1850-2015]"
+                                            >
+                                                Spanish Peseta
+                                            </option>
+                                            <option
+                                                value="Greek drachma [1877-1944]"
+                                            >
+                                                Greek Drachm
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div
+                    id="message_div"
+                    class="hidden bg-blue-100 rounded-lg py-6 px-6 text-base text-blue-700 inline-flex items-center w-full"
+                    role="alert"
+                >
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="info-circle"
+                        class="w-4 h-4 mr-2 fill-current"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                        ></path>
+                    </svg>
+                    <span id="message"></span>
+                </div>
+
+                <div
+                    id="error_div"
+                    class="hidden bg-red-100 rounded-lg py-5 px-6 mb-3 text-base text-red-700 inline-flex items-center w-full"
+                    role="alert"
+                >
+                    <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="times-circle"
+                        class="w-4 h-4 mr-2 fill-current"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"
+                        ></path>
+                    </svg>
+                    <span id="error_message"
+                        >You need to fill all fields before running the
+                        calculation.</span
+                    >
+                </div>
+
+                <div
+                    class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+                    role="alert"
+                    style="border: 0.5px solid white;padding: 10px;margin-top: 50px;"
+                >
+                    <svg
+                        class="flex-shrink-0 inline w-4 h-4 me-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"
+                        />
+                    </svg>
+                    <span class="sr-only">Info</span>
+                    <div style="padding-left: 10px;">
+                        <span
+                            class="font-medium text-gray-700 dark:text-gray-200 text-xs"
+                            ><b>Disclaimer</b></span
+                        >
+                        <p class="text-gray-700 dark:text-gray-200 text-xs">
+                            <i>Historical data and calculation formulas are based on https://www.historicalstatistics.org/Currencyconverter.html.<br>All credits go to the original website.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+        <script src="pluralize.js"></script>
+        <script>
+            initialize();
+        </script>
+    </body>
+</html>
