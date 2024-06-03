@@ -3,7 +3,7 @@
     <head>
         <!-- HTML Meta Tags -->
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>InflationCalc</title>
         <meta name="description" content="Calculate cost of energy" />
 
@@ -578,9 +578,9 @@
                                         type="text"
                                         name="end_amount"
                                         id="end_amount"
-                                        disabled
                                         class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                    />
+                                        style="pointer-events: none;cursor: not-allowed;"
+                                        />
                                     <div
                                         class="absolute inset-y-0 right-0 flex items-center"
                                     >
@@ -716,7 +716,7 @@
                             ><b>Disclaimer</b></span
                         >
                         <p class="text-gray-700 dark:text-gray-200 text-xs">
-                            <i>Historical data and calculation formulas are based on https://www.historicalstatistics.org/Currencyconverter.html.<br>All credits go to the original website.</i>
+                            <i>Historical data and formulas are based on historicalstatistics.org/currencyconverter.html<br>All credits go to the original website.</i>
                         </p>
                     </div>
                 </div>
